@@ -1,0 +1,1 @@
+sns.scatterplot(tips, x='total_bill',y='tip', hue='time')

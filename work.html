@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Record Submission</title>
+</head>
+<body>
+<h1>Record Submission</h1>
+<form id="userForm" onsubmit="return displayData()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" required>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<div id="result" style="margin-top: 20px;"></div>
+
+<script>
+function displayData() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const age = document.getElementById('age').value;
+
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `<h2>Registered Data:</h2>
+                           <p><strong>Name:</strong> ${name}</p>
+                           <p><strong>Email:</strong> ${email}</p>
+                           <p><strong>Age:</strong> ${age}</p>`;
+
+    return false;
+}
+</script>
+</body>
+</html>
